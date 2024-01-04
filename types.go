@@ -1,5 +1,10 @@
 package main
 
+type PartialDate struct {
+	day, month uint8 // [0,255]
+	year uint16 // [0, 65535]
+}
+
 type Socials struct {
 	github string
 	telegram string
@@ -13,11 +18,7 @@ type Achievement struct {
 	date PartialDate
 }
 
-type PartialDate struct {
-	year, month, day uint8
-}
-
-type person struct {
+type Person struct {
 	name string
 	facts []string
 	socials Socials
